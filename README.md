@@ -41,15 +41,21 @@ Installed and configured Active Directory Domain Services (AD DS) on Windows Ser
 
 ---
 
-## 🌐 DNS & DHCP
+## 🌐 DNS
 
-Configured core network services to support the domain and client devices.
+Configured DNS as part of the Active Directory Domain Services installation, using an Active Directory-integrated zone for centralized, secure name resolution across the domain.
 
-- Set up forward lookup zones and DNS records
-- Configured DHCP scope, exclusions, and lease options for client devices
-- Verified name resolution and IP assignment across the domain
+- Forward lookup zone (`lab.local`) automatically populated with SOA, NS, and Host (A) records for the domain controller
+- Manually added a Host (A) record for a client workstation (Workstation1) to verify name resolution
+- Zone type set to **Active Directory-Integrated**, replicating DNS data across all domain controllers rather than relying on a single standalone server
+- Dynamic updates set to **Secure only**, preventing DNS records from being accepted from untrusted or unauthenticated sources — a basic but important security control
+- Verified zone transfers are disabled by default, limiting exposure of zone data to unauthorized servers
 
-*Screenshots coming soon*
+**DNS zone records:**
+![DNS Zone Records](screenshots/dns/zone-records.png)
+
+**Zone properties (AD-integrated, secure dynamic updates):**
+![DNS Zone Properties](screenshots/dns/zone-properties.png)
 
 ---
 
