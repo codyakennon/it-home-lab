@@ -59,6 +59,23 @@ Configured DNS as part of the Active Directory Domain Services installation, usi
 
 ---
 
+## 📡 DHCP
+
+Installed the DHCP Server role and configured a scope to automatically assign IP addresses to client machines on the domain.
+
+- Installed DHCP Server role and completed post-install authorization in Active Directory
+- Created and activated a scope with a defined address range and lease duration
+- Configured scope options including DNS server and domain name
+- Verified functionality end-to-end: released and renewed a lease on a client workstation, confirming it received a real DHCP-assigned address matching the active lease shown on the server
+
+**Client-side lease confirmation (`ipconfig /all`):**
+![DHCP Client Lease](screenshots/dhcp/dhcp-client-lease.png)
+
+**Server-side matching lease (Address Leases):**
+![DHCP Server Lease](screenshots/dhcp/dhcp-server-lease.png)
+
+---
+
 ## 🔒 Group Policy
 
 Created and linked a custom Group Policy Object to enforce a setting across the domain, demonstrating GPO creation, linking, and scope.
