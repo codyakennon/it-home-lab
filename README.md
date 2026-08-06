@@ -75,6 +75,25 @@ Created and linked a custom Group Policy Object to enforce a setting across the 
 
 ---
 
+## 🎫 Help Desk Task Simulation
+
+Practiced core help desk tasks that come up daily in IT support roles, using Active Directory Users and Computers to manage accounts the same way a Level 1 tech would.
+
+- **Password reset:** Reset a user's password and enforced "User must change password at next logon," following standard security practice for help desk-issued resets
+- **Account unlock:** Reviewed and demonstrated the account unlock process via the Account tab, including account lockout status and expiration settings
+- **Group membership change:** Added a user to a security group to adjust their access/permissions, simulating a common access-request ticket
+
+**Password reset:**
+![Password Reset](screenshots/help-desk/password-reset.png)
+
+**Account unlock / account management:**
+![Account Unlock](screenshots/help-desk/account-unlock.png)
+
+**Group membership change:**
+![Group Membership Change](screenshots/help-desk/group-membership-change.png)
+
+---
+
 ## 🔥 Firewall (pfSense) — In Progress
 
 Currently building out a pfSense firewall to sit at the edge of the lab network for traffic control and segmentation.
