@@ -1,5 +1,13 @@
 # IT Home Lab
 
+![Windows Server](https://img.shields.io/badge/Windows_Server-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Active Directory](https://img.shields.io/badge/Active_Directory-0078D6?style=for-the-badge&logo=microsoft&logoColor=white)
+![pfSense](https://img.shields.io/badge/pfSense-212121?style=for-the-badge&logo=pfsense&logoColor=white)
+![VirtualBox](https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white)
+![DNS](https://img.shields.io/badge/DNS-4D4D4D?style=for-the-badge&logo=internetcomputer&logoColor=white)
+![DHCP](https://img.shields.io/badge/DHCP-4D4D4D?style=for-the-badge&logo=internetcomputer&logoColor=white)
+![Group Policy](https://img.shields.io/badge/Group_Policy-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+
 ## 📑 Table of Contents
 - [Lab Overview](https://github.com/codyakennon/it-home-lab/tree/main#%EF%B8%8F-lab-overview)
 - [Active Directory](https://github.com/codyakennon/it-home-lab#%EF%B8%8F-active-directory)
