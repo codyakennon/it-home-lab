@@ -22,12 +22,22 @@ A self-built virtual infrastructure lab created to practice real-world IT suppor
 
 Installed and configured Active Directory Domain Services (AD DS) on Windows Server, standing up a functional domain from scratch.
 
-- Promoted server to Domain Controller
-- Created Organizational Units (OUs) to mirror a realistic company structure
-- Created and managed user accounts and security groups
-- Joined Windows 10/11 client VMs to the domain
+- Promoted server to Domain Controller (domain: lab.local)
+- Designed an Organizational Unit (OU) structure to mirror a realistic company: departments (HR, IT, Sales) nested under an Employees OU, alongside separate OUs for Computers and Groups
+- Created user accounts and assigned them into the correct department OUs
+- Practiced moving objects between OUs, including troubleshooting an "access denied" error caused by the "Protect object from accidental deletion" setting
 
-*Screenshots coming soon*
+**OU structure overview:**
+![AD OU Structure](screenshots/active-directory/OU's.png)
+
+**HR department:**
+![HR OU](screenshots/active-directory/OU's%20HR.png)
+
+**IT department (includes a help desk user and a service account):**
+![IT OU](screenshots/active-directory/OU's%20IT.png)
+
+**Sales department:**
+![Sales OU](screenshots/active-directory/OU's%20Sales.png)
 
 ---
 
