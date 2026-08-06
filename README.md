@@ -61,9 +61,17 @@ Configured DNS as part of the Active Directory Domain Services installation, usi
 
 ## 🔒 Group Policy
 
-Applied Group Policy Objects (GPOs) to enforce settings across domain-joined machines.
+Created and linked a custom Group Policy Object to enforce a setting across the domain, demonstrating GPO creation, linking, and scope.
 
-*Screenshots coming soon*
+- Created **Company Wallpaper** GPO and linked it to the Company OU, applying to all users and computers nested underneath (HR, IT, Sales)
+- Configured under User Configuration → Administrative Templates → Desktop, enforcing a specific desktop wallpaper across domain-joined machines
+- Verified GPO status as Enabled with correct link scope and security filtering (Authenticated Users)
+
+**GPO linked to OU structure:**
+![GPO Tree](screenshots/gp/gpo-tree-overview.png)
+
+**Enforced wallpaper setting (Settings report):**
+![GPO Wallpaper Setting](screenshots/gp/gpo-wallpaper-setting.png)
 
 ---
 
