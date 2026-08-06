@@ -2,7 +2,7 @@
 
 ## 📑 Table of Contents
 - [Lab Overview](https://github.com/codyakennon/it-home-lab/tree/main#%EF%B8%8F-lab-overview)
-- [Active Directory](https://github.com/codyakennon/it-home-lab#-active-directory)
+- [Active Directory](https://github.com/codyakennon/it-home-lab#%EF%B8%8F-active-directory)
 - [DNS](#-dns)
 - [DHCP](#-dhcp)
 - [Group Policy](#-group-policy)
