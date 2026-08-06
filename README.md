@@ -1,5 +1,17 @@
 # IT Home Lab
 
+## 📑 Table of Contents
+- [Lab Overview](#-lab-overview)
+- [Active Directory](#-active-directory)
+- [DNS](#-dns)
+- [DHCP](#-dhcp)
+- [Group Policy](#-group-policy)
+- [Help Desk Task Simulation](#-help-desk-task-simulation)
+- [Firewall (pfSense) — In Progress](#-firewall-pfsense--in-progress)
+- [Challenges & Lessons Learned](#-challenges--lessons-learned)
+- [TryHackMe — SOC Level 1](#-tryhackme--soc-level-1)
+- [Why I Built This](#-why-i-built-this)
+
 A self-built virtual infrastructure lab created to practice real-world IT support and networking skills — built as I transition from sales into IT and cybersecurity.
 
 ## 🖥️ Lab Overview
