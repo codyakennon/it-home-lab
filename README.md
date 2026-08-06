@@ -1,8 +1,8 @@
 # IT Home Lab
 
 ## 📑 Table of Contents
-- [Lab Overview](#-lab-overview)
-- [Active Directory](#-active-directory)
+- [Lab Overview](https://github.com/codyakennon/it-home-lab/tree/main#%EF%B8%8F-lab-overview)
+- [Active Directory](https://github.com/codyakennon/it-home-lab#-active-directory)
 - [DNS](#-dns)
 - [DHCP](#-dhcp)
 - [Group Policy](#-group-policy)
