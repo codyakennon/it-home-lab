@@ -8,6 +8,16 @@
 ![DHCP](https://img.shields.io/badge/DHCP-4D4D4D?style=for-the-badge&logo=internetcomputer&logoColor=white)
 ![Group Policy](https://img.shields.io/badge/Group_Policy-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
+![Last Updated](https://img.shields.io/badge/Last_Updated-August_2026-success?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Actively_Building-yellow?style=for-the-badge)
+
+### 📊 At a Glance
+- **4** Virtual Machines deployed (Windows Server, Windows 10, Windows 11, pfSense)
+- **3** Departments structured in Active Directory (HR, IT, Sales)
+- **1** Custom Group Policy Object created and enforced
+- **3** Help desk tasks documented (password reset, account unlock, group management)
+- **2** Real troubleshooting issues diagnosed and resolved
+
 ## 📑 Table of Contents
 - [Lab Overview](https://github.com/codyakennon/it-home-lab/tree/main#%EF%B8%8F-lab-overview)
 - [Active Directory](https://github.com/codyakennon/it-home-lab#%EF%B8%8F-active-directory)
