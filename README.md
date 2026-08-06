@@ -72,7 +72,41 @@ Currently building out a pfSense firewall to sit at the edge of the lab network 
 - [ ] Configure firewall rules
 - [ ] Test NAT and traffic filtering
 
+---
+
 *Screenshots coming soon*
+## 🧩 Challenges & Lessons Learned
+
+Real hands-on labs come with real problems. Here are a few I ran into and how I solved them and documented because troubleshooting is the actual job.
+
+**pfSense reinstalled itself after setup**
+After completing the pfSense install and rebooting, the VM booted straight back into the installer instead of the installed system. Cause: the installation ISO was still mounted in the virtual optical drive, and VirtualBox's boot order checks the CD/DVD drive before the hard disk, same as a physical PC's BIOS. Fix: ejected the ISO (Devices → Optical Drives → Remove disk) and forced a clean reset, which booted correctly from the virtual hard disk. Lesson: always eject installation media before rebooting a VM out of setup.
+
+**"Access Denied" moving an OU in Active Directory**
+While reorganizing my OU structure to nest IT alongside HR and Sales under Employees, Windows refused to move the IT OU and returned an access denied error. Cause: the OU had "Protect object from accidental deletion" enabled by default, which also blocks moves. Fix: enabled Advanced Features in AD Users and Computers, opened the OU's Object tab, and temporarily unchecked the protection setting to complete the move, then re-enabled it afterward as a best practice.
+
+**DHCP scope and firewall LAN subnet mismatch**
+After building out a DHCP scope on the domain controller (192.168.10.x), I realized it doesn't match the LAN subnet I'd already configured on the pfSense firewall (192.168.1.1). The two need to be on the same subnet for pfSense to route and firewall traffic for DHCP clients correctly. This is a good example of why network planning matters before configuring individual devices, currently working through resolving this by aligning both to the same subnet.
+
+**Inconsistent OU structure**
+Early in building out Active Directory, I had HR and Sales OUs nested under Employees, but two actual user accounts sitting loose directly in Employees instead of inside a department. I caught this while reviewing the structure for documentation and reorganized so every user lives inside a proper department OU (HR, IT, or Sales), making the hierarchy consistent and easier to apply Group Policy and permissions against going forward.
+
+---
+
+## 🔐 TryHackMe — SOC Level 1
+
+Currently working through TryHackMe's **SOC Level 1** learning path to build foundational security operations skills alongside my infrastructure work.
+
+**Focus areas in progress:**
+- Security event monitoring and alert triage
+- SIEM fundamentals and log analysis
+- Threat intelligence and the MITRE ATT&CK framework
+- Incident response workflows
+- Phishing analysis and basic malware investigation
+
+*Room completions and writeups will be added here as they're finished.*
+
+[TryHackMe Profile](https://tryhackme.com/p/codyakennon)
 
 ---
 
