@@ -1,5 +1,6 @@
 # IT Home Lab
-*From SaaS sales to IT Support/Cybersecurity — one broken lab at a time.*
+
+[![Typing SVG](https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=800&lines=SaaS+Sales+%E2%86%92+IT+Support+%E2%86%92+SOC+Analyst+%E2%86%92+Cybersecurity+Analyst;CompTIA+A%2B+%28Completed%29+%7C+Network%2B+%7C+Security%2B;AD+%7C+DNS+%7C+DHCP+%7C+GPO+%7C+pfSense+%E2%80%94+All+Documented+Below;Building+the+Skills%2C+One+Day+at+a+Time)](https://git.io/typing-svg)
 
 ![Windows Server](https://img.shields.io/badge/Windows_Server-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Active Directory](https://img.shields.io/badge/Active_Directory-0078D6?style=for-the-badge&logo=microsoft&logoColor=white)
@@ -31,6 +32,8 @@
 - [TryHackMe — SOC Level 1](#-tryhackme--soc-level-1)
 - [Why I Built This](#-why-i-built-this)
 
+![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
+
 A self-built virtual infrastructure lab created to practice real-world IT support and networking skills — built as I transition from sales into IT and cybersecurity.
 
 ## 🖥️ Lab Overview
@@ -47,7 +50,7 @@ A self-built virtual infrastructure lab created to practice real-world IT suppor
 - pfSense sits between the lab network and the internet, acting as the firewall/gateway
 - Windows Server handles DNS and DHCP for the domain
 
----
+![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
 
 ## 🗂️ Active Directory
 
@@ -70,7 +73,7 @@ Installed and configured Active Directory Domain Services (AD DS) on Windows Ser
 **Sales department:**
 ![Sales OU](screenshots/active-directory/OU's%20Sales.png)
 
----
+![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
 
 ## 🌐 DNS
 
@@ -88,7 +91,7 @@ Configured DNS as part of the Active Directory Domain Services installation, usi
 **Zone properties (AD-integrated, secure dynamic updates):**
 ![DNS Zone Properties](screenshots/dns/zone-properties.png)
 
----
+![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
 
 ## 📡 DHCP
 
@@ -105,7 +108,7 @@ Installed the DHCP Server role and configured a scope to automatically assign IP
 **Server-side matching lease (Address Leases):**
 ![DHCP Server Lease](screenshots/dhcp/dhcp-server-lease.png)
 
----
+![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
 
 ## 🔒 Group Policy
 
@@ -121,7 +124,7 @@ Created and linked a custom Group Policy Object to enforce a setting across the 
 **Enforced wallpaper setting (Settings report):**
 ![GPO Wallpaper Setting](screenshots/gp/gpo-wallpaper-setting.png)
 
----
+![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
 
 ## 🎫 Help Desk Task Simulation
 
@@ -140,7 +143,7 @@ Practiced core help desk tasks that come up daily in IT support roles, using Act
 **Group membership change:**
 ![Group Membership Change](screenshots/help-desk/group-membership-change.png)
 
----
+![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
 
 ## 🔥 Firewall (pfSense) — In Progress
 
@@ -153,7 +156,7 @@ Currently building out a pfSense firewall to sit at the edge of the lab network 
 - [ ] Configure firewall rules
 - [ ] Test NAT and traffic filtering
 
----
+![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
 
 *Screenshots coming soon*
 ## 🧩 Challenges & Lessons Learned
@@ -172,7 +175,7 @@ After building out a DHCP scope on the domain controller (192.168.10.x), I reali
 **Inconsistent OU structure**
 Early in building out Active Directory, I had HR and Sales OUs nested under Employees, but two actual user accounts sitting loose directly in Employees instead of inside a department. I caught this while reviewing the structure for documentation and reorganized so every user lives inside a proper department OU (HR, IT, or Sales), making the hierarchy consistent and easier to apply Group Policy and permissions against going forward.
 
----
+![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
 
 ## 🔐 TryHackMe — SOC Level 1
 
@@ -189,7 +192,7 @@ Currently working through TryHackMe's **SOC Level 1** learning path to build fou
 
 [TryHackMe Profile](https://tryhackme.com/p/codyakennon)
 
----
+![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
 
 ## 📌 Why I Built This
 
