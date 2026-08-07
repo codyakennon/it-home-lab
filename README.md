@@ -1,6 +1,6 @@
 # IT Home Lab
 
-[![Typing SVG](https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=800&lines=SaaS+Sales+%E2%86%92+IT+Support+%E2%86%92+SOC+Analyst+%E2%86%92+Cybersecurity+Analyst;CompTIA+A%2B+%28Completed%29+%7C+Network%2B+%7C+Security%2B;AD+%7C+DNS+%7C+DHCP+%7C+GPO+%7C+pfSense+%E2%80%94+All+Documented+Below;Building+the+Skills%2C+One+Day+at+a+Time)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=800&lines=Built+From+Scratch+in+Oracle+VirtualBox;Active+Directory+%7C+DNS+%7C+DHCP+%7C+Group+Policy;pfSense+Firewall+%E2%80%94+In+Progress;Every+Step+Documented+Below)](https://git.io/typing-svg)
 
 ![Windows Server](https://img.shields.io/badge/Windows_Server-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Active Directory](https://img.shields.io/badge/Active_Directory-0078D6?style=for-the-badge&logo=microsoft&logoColor=white)
