@@ -50,6 +50,10 @@ A self-built virtual infrastructure lab created to practice real-world IT suppor
 - pfSense sits between the lab network and the internet, acting as the firewall/gateway
 - Windows Server handles DNS and DHCP for the domain
 
+**Network Topology:**
+
+![Network Diagram](screenshots/network-topology2.png)
+
 ![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
 
 ## 🗂️ Active Directory
