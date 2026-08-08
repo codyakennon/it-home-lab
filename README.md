@@ -156,7 +156,6 @@ Practiced core help desk tasks that come up daily in IT support roles, using Act
 - [x] Completed web GUI setup wizard
 - [x] Created and tested firewall rules
 - [x] Verified NAT/traffic filtering end-to-end
-- [x] Set up pfSense as the network's firewall and default gateway, configured firewall rules, and verified traffic filtering end-to-end.
 
 **Setup:**
 - Corrected a subnet mismatch — pfSense's LAN interface was still on the default 192.168.1.1, while the rest of the lab network was on 192.168.10.x. Reconfigured the LAN interface via the console to 192.168.10.1/24 to match.
@@ -180,7 +179,6 @@ Practiced core help desk tasks that come up daily in IT support roles, using Act
 
 ![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
 
-*Screenshots coming soon*
 ## 🧩 Challenges & Lessons Learned
 
 Real hands-on labs come with real problems. Here are a few I ran into and how I solved them and documented because troubleshooting is the actual job.
@@ -191,8 +189,8 @@ After completing the pfSense install and rebooting, the VM booted straight back 
 **"Access Denied" moving an OU in Active Directory**
 While reorganizing my OU structure to nest IT alongside HR and Sales under Employees, Windows refused to move the IT OU and returned an access denied error. Cause: the OU had "Protect object from accidental deletion" enabled by default, which also blocks moves. Fix: enabled Advanced Features in AD Users and Computers, opened the OU's Object tab, and temporarily unchecked the protection setting to complete the move, then re-enabled it afterward as a best practice.
 
-**DHCP scope and firewall LAN subnet mismatch**
-After building out a DHCP scope on the domain controller (192.168.10.x), I realized it doesn't match the LAN subnet I'd already configured on the pfSense firewall (192.168.1.1). The two need to be on the same subnet for pfSense to route and firewall traffic for DHCP clients correctly. This is a good example of why network planning matters before configuring individual devices, currently working through resolving this by aligning both to the same subnet. Resolved by reconfiguring pfSense's LAN interface to 192.168.10.1/24 via the console to match the rest of the network.
+**DHCP scope and firewall LAN subnet mismatch** 
+After building out a DHCP scope on the domain controller (192.168.10.x), I realized it didn't match the LAN subnet already configured on the pfSense firewall (192.168.1.1). The two needed to be on the same subnet for pfSense to route and firewall traffic correctly for DHCP clients. Resolved by reconfiguring pfSense's LAN interface to 192.168.10.1/24 via the console to match the rest of the network.
 
 **Inconsistent OU structure**
 Early in building out Active Directory, I had HR and Sales OUs nested under Employees, but two actual user accounts sitting loose directly in Employees instead of inside a department. I caught this while reviewing the structure for documentation and reorganized so every user lives inside a proper department OU (HR, IT, or Sales), making the hierarchy consistent and easier to apply Group Policy and permissions against going forward.
