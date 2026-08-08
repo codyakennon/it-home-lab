@@ -14,7 +14,7 @@
 ![Status](https://img.shields.io/badge/Status-Actively_Building-yellow?style=for-the-badge)
 
 ### 📊 At a Glance
-- **4** Virtual Machines deployed (Windows Server, Windows 10, Windows 11, pfSense)
+- **3** Virtual Machines deployed (Windows Server, Windows 11, pfSense)
 - **3** Departments structured in Active Directory (HR, IT, Sales)
 - **1** Custom Group Policy Object created and enforced
 - **3** Help desk tasks documented (password reset, account unlock, group management)
