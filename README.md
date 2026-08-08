@@ -149,16 +149,35 @@ Practiced core help desk tasks that come up daily in IT support roles, using Act
 
 ![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
 
-## 🔥 Firewall (pfSense) — In Progress
+### 🔥 Firewall (pfSense) — ✅ Complete
 
-Currently building out a pfSense firewall to sit at the edge of the lab network for traffic control and segmentation.
+- [x] Installed pfSense and configured interfaces
+- [x] Set static LAN IP (192.168.10.1/24)
+- [x] Completed web GUI setup wizard
+- [x] Created and tested firewall rules
+- [x] Verified NAT/traffic filtering end-to-end
 
-- [x] Installed pfSense in VirtualBox
-- [x] Assigned WAN/LAN interfaces
-- [x] Configured static LAN IP
-- [ ] Access web GUI and complete setup wizard
-- [ ] Configure firewall rules
-- [ ] Test NAT and traffic filtering
+- [ ] Set up pfSense as the network's firewall and default gateway, configured firewall rules, and verified traffic filtering end-to-end.
+
+**Setup:**
+- Corrected a subnet mismatch — pfSense's LAN interface was still on the default 192.168.1.1, while the rest of the lab network was on 192.168.10.x. Reconfigured the LAN interface via the console to 192.168.10.1/24 to match.
+- Completed the web GUI setup wizard, pointing DNS to the internal AD DNS server (192.168.10.10), keeping WAN on DHCP, and leaving default security settings (block RFC1918/bogon networks) enabled.
+
+![pfSense Dashboard](screenshots/pfsense/pfsense-dashboard.png)
+
+**Firewall Rules:**
+- Created a rule blocking ICMP (ping) traffic from LAN clients, placed above the default allow rule.
+- Verified the rule was active by pinging pfSense from a client — requests timed out as expected (100% packet loss), confirming the rule was correctly filtering traffic.
+
+![Firewall Rule Configuration](screenshots/pfsense/firewall-rule-config.png)
+![Ping Blocked](screenshots/pfsense/ping-blocked.png)
+
+**NAT / Internet Access Verification:**
+- Tested internet connectivity end-to-end by browsing from a client machine, which initially failed.
+- Diagnosed and resolved two separate underlying issues (see Challenges section below) to get traffic flowing correctly.
+- Confirmed full success with a client browsing to Google, proving DHCP, DNS, and NAT were all functioning correctly together.
+
+![Successful Browsing](screenshots/pfsense/successful-browsing.png)
 
 ![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
 
@@ -174,10 +193,16 @@ After completing the pfSense install and rebooting, the VM booted straight back 
 While reorganizing my OU structure to nest IT alongside HR and Sales under Employees, Windows refused to move the IT OU and returned an access denied error. Cause: the OU had "Protect object from accidental deletion" enabled by default, which also blocks moves. Fix: enabled Advanced Features in AD Users and Computers, opened the OU's Object tab, and temporarily unchecked the protection setting to complete the move, then re-enabled it afterward as a best practice.
 
 **DHCP scope and firewall LAN subnet mismatch**
-After building out a DHCP scope on the domain controller (192.168.10.x), I realized it doesn't match the LAN subnet I'd already configured on the pfSense firewall (192.168.1.1). The two need to be on the same subnet for pfSense to route and firewall traffic for DHCP clients correctly. This is a good example of why network planning matters before configuring individual devices, currently working through resolving this by aligning both to the same subnet.
+After building out a DHCP scope on the domain controller (192.168.10.x), I realized it doesn't match the LAN subnet I'd already configured on the pfSense firewall (192.168.1.1). The two need to be on the same subnet for pfSense to route and firewall traffic for DHCP clients correctly. This is a good example of why network planning matters before configuring individual devices, currently working through resolving this by aligning both to the same subnet. Resolved by reconfiguring pfSense's LAN interface to 192.168.10.1/24 via the console to match the rest of the network.
 
 **Inconsistent OU structure**
 Early in building out Active Directory, I had HR and Sales OUs nested under Employees, but two actual user accounts sitting loose directly in Employees instead of inside a department. I caught this while reviewing the structure for documentation and reorganized so every user lives inside a proper department OU (HR, IT, or Sales), making the hierarchy consistent and easier to apply Group Policy and permissions against going forward.
+
+**DHCP scope missing default gateway**
+After setting up pfSense's firewall rules, clients could not reach the internet despite having valid IP addresses. Running `ipconfig /all` revealed no default gateway was assigned. Investigation showed the DHCP scope on the Windows Server only had DNS-related options configured (006, 015) — the 003 Router option had never been added. Added 003 Router pointing to the pfSense LAN IP (192.168.10.1), then confirmed via `ipconfig /release` / `/renew` that clients received the correct gateway.
+
+**DNS forwarder pointed to a stale address**
+Even after fixing the gateway, clients still couldn't resolve external domains. Testing showed clients could reach the DNS server directly (ping succeeded), so the issue was isolated to DNS resolution specifically rather than general connectivity. Checking DNS Manager's Forwarders tab revealed it was still pointed at 10.0.2.3, a leftover VirtualBox NAT default from earlier in the lab's setup. Updated the forwarder to point to pfSense (192.168.10.1), which correctly relayed external DNS queries out to the internet. This resolved the issue and confirmed the full DHCP → DNS → firewall → NAT chain was working end to end.
 
 ![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
 
