@@ -27,7 +27,7 @@
 - [DHCP](#-dhcp)
 - [Group Policy](#-group-policy)
 - [Help Desk Task Simulation](#-help-desk-task-simulation)
-- [Firewall (pfSense) — In Progress](#-firewall-pfsense--in-progress)
+- [Firewall (pfSense)](#-firewall-pfsense---complete)
 - [Challenges & Lessons Learned](#-challenges--lessons-learned)
 - [TryHackMe — SOC Level 1](#-tryhackme--soc-level-1)
 - [Why I Built This](#-why-i-built-this)
@@ -156,8 +156,7 @@ Practiced core help desk tasks that come up daily in IT support roles, using Act
 - [x] Completed web GUI setup wizard
 - [x] Created and tested firewall rules
 - [x] Verified NAT/traffic filtering end-to-end
-
-- [ ] Set up pfSense as the network's firewall and default gateway, configured firewall rules, and verified traffic filtering end-to-end.
+- [x] Set up pfSense as the network's firewall and default gateway, configured firewall rules, and verified traffic filtering end-to-end.
 
 **Setup:**
 - Corrected a subnet mismatch — pfSense's LAN interface was still on the default 192.168.1.1, while the rest of the lab network was on 192.168.10.x. Reconfigured the LAN interface via the console to 192.168.10.1/24 to match.
